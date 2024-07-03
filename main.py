@@ -2,14 +2,14 @@ import pygame
 from generatelist import generate_list
 from drawinformation import DrawInformation
 from draw import draw
-from sortingalgorithms import bubble_sort, insertion_sort, quicksort
+from sortingalgorithms import bubble_sort, insertion_sort, quicksort, mergesort, heap_sort
 
 
 def main():
     run = True
     clock = pygame.time.Clock()
 
-    n = 50
+    n = 100
     min_val = 0
     max_val = 100
 
@@ -60,6 +60,12 @@ def main():
             elif event.key == pygame.K_q and not sorting:
                 sorting_algorithm = quicksort
                 sorting_algo_name = "Quicksort"
+            elif event.key == pygame.K_m and not sorting:
+                sorting_algorithm = mergesort
+                sorting_algo_name = "Mergesort"
+            elif event.key == pygame.K_h and not sorting:
+                sorting_algorithm = heap_sort
+                sorting_algo_name = "Heap sort"
 
     pygame.quit()
 

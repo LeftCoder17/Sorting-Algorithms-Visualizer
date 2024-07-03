@@ -14,6 +14,9 @@ def draw(draw_info: DrawInformation, algorithm_name: str, ascending: bool):
     sorting = draw_info.FONT.render("B - Bubble Sort | I - Insertion Sort | Q - Quicksort", 1, draw_info.BLACK)
     draw_info.window.blit(sorting, (draw_info.width/2 - sorting.get_width()/2 , 75))
 
+    sorting = draw_info.FONT.render("M - Mergesort | H - Heap Sort", 1, draw_info.BLACK)
+    draw_info.window.blit(sorting, (draw_info.width/2 - sorting.get_width()/2 , 105))
+
     draw_list(draw_info)
     pygame.display.update()
 
