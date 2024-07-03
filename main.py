@@ -9,7 +9,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
 
-    n = 100
+    n = 300
     min_val = 0
     max_val = 100
 
@@ -23,7 +23,7 @@ def main():
     sorting_algorithm_generator = None
 
     while run:
-        clock.tick(80)
+        clock.tick(160)
 
         if sorting:
             try:

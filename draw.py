@@ -5,7 +5,7 @@ from drawinformation import DrawInformation
 def draw(draw_info: DrawInformation, algorithm_name: str, ascending: bool):
     draw_info.window.fill(draw_info.BACKGROUND_COLOR)
 
-    title = draw_info.LARGE_FONT.render(f"Current: {algorithm_name} - {'Ascending' if ascending else 'Descending'}", 1, draw_info.GREEN)
+    title = draw_info.LARGE_FONT.render(f"Current: {algorithm_name} - {'Ascending' if ascending else 'Descending'}", 1, draw_info.BLUE)
     draw_info.window.blit(title, (draw_info.width/2 - title.get_width()/2 , 5))
 
     controls = draw_info.FONT.render("R - Reset | SPACE - Start Sorting | A - Ascending | D - Descending", 1, draw_info.BLACK)
