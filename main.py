@@ -2,7 +2,7 @@ import pygame
 from generatelist import generate_list
 from drawinformation import DrawInformation
 from draw import draw
-from sortingalgorithms import bubble_sort
+from sortingalgorithms import bubble_sort, insertion_sort, quicksort
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
     sorting_algorithm_generator = None
 
     while run:
-        clock.tick(60)
+        clock.tick(80)
 
         if sorting:
             try:
@@ -54,11 +54,15 @@ def main():
             elif event.key == pygame.K_b and not sorting:
                 sorting_algorithm = bubble_sort
                 sorting_algo_name = "Bubble Sort"
-
+            elif event.key == pygame.K_i and not sorting:
+                sorting_algorithm = insertion_sort
+                sorting_algo_name = "Insertion Sort"
+            elif event.key == pygame.K_q and not sorting:
+                sorting_algorithm = quicksort
+                sorting_algo_name = "Quicksort"
 
     pygame.quit()
 
 
 if __name__ == "__main__":
     main()
-    
